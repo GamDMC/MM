@@ -1,10 +1,14 @@
 {
-  "sad": {
-    "keywords": ["sad", "cry", "sorrow"],
+  "golu": {
+    "keywords": ["golu"],
     "count": 3
   },
-  "happy": {
-    "keywords": ["happy", "joy"],
-    "count": 2
+  "krishna": {
+    "keywords": ["krishna", "krish"],
+    "count": 3
+  },
+  "moon": {
+    "keywords": ["eid", "moon"],
+    "count": 3
   }
 }
