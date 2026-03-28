@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+function getRandomImage(category, count) {
+  const num = Math.floor(Math.random() * count) + 1;
+  return `images/${category}/${num}.jpg`;
+}
+
+async function run() {
+  const params = new URLSearchParams(window.location.search);
+  const msg = (params.get("message") || "").toLowerCase();
+
+  const res = await fetch("data.json");
+  const data = await res.json();
+
+  let result = "default.jpg";
+
+  for (const [category, value] of Object.entries(data)) {
+    if (value.keywords.some(word => msg.includes(word))) {
+      result = getRandomImage(category, value.count);
+      break;
+    }
+  }
+
+  document.body.innerText = JSON.stringify({ image: result });
+}
+
+run();
+</script>
+</body>
+</html>
