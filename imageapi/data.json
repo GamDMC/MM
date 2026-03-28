@@ -1,0 +1,10 @@
+{
+  "sad": {
+    "keywords": ["sad", "cry", "sorrow"],
+    "count": 3
+  },
+  "happy": {
+    "keywords": ["happy", "joy"],
+    "count": 2
+  }
+}
