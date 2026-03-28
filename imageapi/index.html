@@ -24,7 +24,8 @@ async function run() {
   }
 
   // document.body.innerText = JSON.stringify({ image: result });
-document.body.innerHTML = `<img src="${result}" style="max-width:100%;" />`;
+// 👇 redirect to image directly
+window.location.href = result;
 }
 
 run();
