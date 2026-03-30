@@ -34,8 +34,9 @@ async function run() {
     }
 
     // 4. Redirect to the image
-    window.location.href = result;
-
+  //  window.location.href = result;
+  document.body.innerText = result;
+  
   } catch (error) {
     console.error("Error:", error);
     // Optional: Redirect to a fallback image if the Doc fails to load
